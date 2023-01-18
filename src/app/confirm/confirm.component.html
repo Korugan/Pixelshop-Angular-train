@@ -1,0 +1,49 @@
+<!-- Button trigger modal -->
+<button
+  type="button"
+  (click)="showModal = true"
+  class="btn btn-primary"
+  data-bs-toggle="modal"
+  data-bs-target="#exampleModal"
+  [disabled]="isDisabled"
+>
+  Confirmar compra
+</button>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  [ngClass]="{ show: showModal }"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">
+          Ha completado su compra
+        </h1>
+        <button
+          type="button"
+          (click)="showModal = false"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">Se ha matriculado con éxito</div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-dismiss="modal"
+          (click)="showModal = false"
+        >
+          Cerrar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

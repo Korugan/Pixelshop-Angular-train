@@ -1,0 +1,19 @@
+<img
+  (contextmenu)="mensaje()"
+  src="{{ product.picture }}"
+  class="card-img-top"
+  alt="{{ product.title }}"
+/>
+<div class="card-body">
+  <h5 class="card-title">{{ product.title }}</h5>
+  <p class="card-text">{{ product.desc }}</p>
+  <p class="card-text">Precio: {{ product.price }}€</p>
+  <button
+    type="button"
+    class="btn btn-primary"
+    [disabled]="isDisabled()"
+    (click)="matricularse()"
+  >
+    {{ matricula }}
+  </button>
+</div>
